@@ -1,4 +1,9 @@
-# CoinHive Stratum Mining Proxy
+# how_does_monero_work
+This is the code for "How Does Monero Work?" By Siraj Raval on Youtube 
+
+This is the notebook for [this](https://youtu.be/cjbHqvr4ffo) video on Youtube by Siraj Raval on how Monero works. https://getmonero.org/
+
+Install [juypter notebook](http://jupyter.org/). Then run 'jupyter notebook' in the root directory in terminal and the notebook will pop up in your browser. 
 
 A proof of concept of web mining using CoinHive's [JavaScript Mining](https://coinhive.com/documentation/miner) library. The proxy acts like coin hive to connect to a mining pool. Should work with any monero pool based on the [Stratum Mining Protocol](https://en.bitcoin.it/wiki/Stratum_mining_protocol). You can even set up your [own pool](https://github.com/sammy007/monero-stratum).
 
@@ -121,7 +126,7 @@ Setup and run `coinhive-stratum-mining-proxy` with `xmr-eu1.nanopool.org 14444` 
 
 ## Disclaimer
 
-This project is not endorsed by or affiliated with coinhive.com in any way.
+This project is not endorsed by or affiliated with coinhive.com in any way. Credits for the code go to https://github.com/x25/coinhive-stratum-mining-proxy 
 
 ## License
 
